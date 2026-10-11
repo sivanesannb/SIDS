@@ -1,0 +1,9 @@
+{
+  "fixed_schedule_mm_total": 3780000,
+  "model_guided_mm_total": 2423400,
+  "oracle_mm_total": 2426400,
+  "water_saved_vs_fixed_pct": 35.888888888888886,
+  "oracle_saving_pct": 35.80952380952381,
+  "under_irrigated_pct": 1.023015873015873,
+  "over_irrigated_pct": 0.7936507936507936
+}

@@ -1,0 +1,5 @@
+model,accuracy,balanced_acc,precision_macro,recall_macro,f1_macro,f1_weighted,recall_High
+Moisture Rule Baseline,0.4466,0.5784,0.3759,0.5784,0.3587,0.4763,0.9688
+Logistic Regression,0.8428,0.8495,0.7065,0.8495,0.7443,0.8503,0.8886
+Random Forest,0.9849,0.9598,0.9762,0.9598,0.9678,0.9848,0.9086
+Gradient Boosting,0.9818,0.9673,0.951,0.9673,0.9588,0.9819,0.941
