@@ -9,7 +9,15 @@ import streamlit as st
 from src.config import OUT_DIR, CLASSES, BASELINE_DOSE_MM
 from src.recommend import TYPICAL, predict_probs, recommend, explain
 
-st.set_page_config(page_title="Adaptive Irrigation Intelligence", page_icon="💧", layout="wide")
+# 1. Load the logo image file from your root folder
+from PIL import Image
+logo_image = Image.open("logo.jpg")
+
+# 2. Set page config FIRST (and swap out the droplet emoji for your logo!)
+st.set_page_config(page_title="Adaptive Irrigation Intelligence", page_icon=logo_image, layout="wide")
+
+# 3. Add it to your sidebar layout
+st.sidebar.image(logo_image, use_container_width=True)
 
 STAGES = ["Sowing", "Vegetative", "Flowering", "Harvest"]
 SOILS = ["Sandy", "Clay", "Loamy", "Silt"]
