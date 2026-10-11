@@ -3,7 +3,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA_PATH = ROOT / "data" / "train.csv"      # Kaggle Playground S6E4 train.csv
-OUT_DIR = ROOT / "outputs"
+OUT_DIR = Path("outputs")
 OUT_DIR.mkdir(exist_ok=True)
 
 TARGET = "irrigation_need"
