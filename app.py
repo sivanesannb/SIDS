@@ -61,25 +61,9 @@ st.title("💧 Adaptive Irrigation Intelligence")
 st.caption("Predicts irrigation need from soil, weather and crop data, then turns it into a farmer-friendly "
            "recommendation. Decision-support only; combine with your own field observation.")
 
-# AUTOMATIC TRAINING FALLBACK IF MODEL IS MISSING
 if bundle is None:
-    import os
-    st.info("🔄 First-time setup: Training the machine learning model on the cloud server. Please wait about 30 seconds...")
-    
-    # Create the missing outputs directory and run the training pipeline script
-    os.makedirs(str(OUT_DIR), exist_ok=True)
-    os.system("python main.py --synthetic")
-    
-    # Reload the newly created model file weights
-    st.cache_resource.clear()
-    bundle = load_bundle()
-    
-    if bundle is None:
-        st.error("Failed to auto-train the model. Please check your GitHub repository file layout.")
-        st.stop()
-    else:
-        st.success("🎉 Training complete! Loading dashboard workspace...")
-        st.rerun()
+    st.error("Model file not found. Please upload outputs/model.pkl to your GitHub repository.")
+    st.stop()
 
 tab_adv, tab_res = st.tabs(["Advisor", "Model results"])
 
